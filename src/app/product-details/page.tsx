@@ -174,7 +174,7 @@ const ProductDetails = () => {
 
             <div className="p-4">
               <Text color={"primary2"} font={"bold"} size={"4xl"}>
-                Detail
+                Details
               </Text>
               <Text font={"semiBold"} className="mt-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -69,15 +69,15 @@ const NavBarLink = ({
 }: NavBarLinkProps) => {
   const isActive = url === href;
   return (
-    <li className={`${isActive ? "border-primary2 text-primary2" : ""} w-full flex justify-center items-center h-[85px] hover:bg-bgThird cursor-pointer hover:text-primary2`}>
+    <li className={`${isActive ? "border-primary text-primary" : ""} w-full flex justify-center items-center h-[85px] hover:bg-bgThird cursor-pointer hover:text-primary`}>
       <Link
-        className={`text-md text-navLinks group mt-4 flex flex-col w-[40px] items-center gap-x-3.5 rounded-full border-primary2 font-sans font-semibold hover:bg-bgThird hover:text-primary2`}
+        className={`text-md text-navLinks group mt-4 flex flex-col w-[40px] items-center gap-x-3.5 rounded-full border-primary font-sans font-semibold hover:bg-bgThird hover:text-primary`}
         href={href}
       >
         <Icon
           className={`h-8 w-8  : ""}`}
         />
-        <p className={`${isActive ? "text-primary2" : ""} text-sm mt hover:text-primary2`}>{label}</p>
+        <p className={`${isActive ? "text-primary" : ""} text-sm mt hover:text-primary`}>{label}</p>
       </Link>
     </li>
   );
