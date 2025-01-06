@@ -28,9 +28,10 @@ html {
   /* --primary: 62, 90, 240; #3e5af0 */
   --primary: 52, 152, 219; /* #3498DB */
   --primary2: 16, 94, 245; /* #105EF5 */
+  --navLinks: 84, 101, 111; /* #54656F */
   --primaryHover: 33, 102, 148; /* #2d85c0 */
   --bg-primary: 255, 255, 255; /* #ffffff */
-  --bg-secondary: 245, 246, 250; /* #f5f6fa */
+  --bg-secondary: 240, 240, 240; /* #F0F0F0 */
   --bg-third: 245, 250, 255; /* ##F5FAFF */
   --comment: 241, 245, 249; /* #F1F5F9 */ 
   --bg-gray: 224, 224, 224; /* #e0e0e0 */
@@ -56,6 +57,7 @@ html {
 .dark {
   --primary: 52, 152, 219; /* #3498DB */
   --primary2: 16, 94, 245; /* #105EF5 */
+  --navLinks: 84, 101, 111; /* #54656F */
   --bg-primary: 13, 13, 13; /* #0d0d0d */
   --bg-secondary: 23, 28, 35; /* #171c23 */
   --bg-third: 7, 31, 58; /* #071f3a */

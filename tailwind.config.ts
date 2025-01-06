@@ -15,6 +15,7 @@ export default {
       colors: {
         primary: "rgba(var(--primary))",
         primary2: "rgba(var(--primary2))",
+        navLinks: "rgba(var(--navLinks))",
         primaryHover: "rgba(33, 102, 148)", 
         bgPrimary: "rgba(var(--bg-primary))",
         bgSecondary: "rgba(var(--bg-secondary))",
