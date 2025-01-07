@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 html {
-  touch-action: none;
-  -ms-touch-action: none;
+  /* touch-action: none; */
+  /* -ms-touch-action: none; */
   min-zoom: 0.5;
   max-zoom: 1.1;
 }
+
+
 
 @supports not (zoom: 1) {
   html {
