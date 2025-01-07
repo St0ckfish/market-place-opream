@@ -86,16 +86,17 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <title>Opream</title>
+        <title>Person</title>
         <meta name="description" content="MarketPlace Person" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0, user-scalable=yes" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </head>
       <body className="bg-bgSecondary">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <div className="hidden sm:block">
+          <div className="hidden md:block">
             <NavBar />
           </div>
-          <div className="block sm:hidden">
+          <div className="block md:hidden">
             <NavBarMobile />
           </div>
           <TRPCReactProvider>{children}</TRPCReactProvider>
