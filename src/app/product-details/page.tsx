@@ -148,9 +148,9 @@ const ProductDetails = () => {
                 className="block cursor-pointer md:hidden"
               />
               <div className="mt-4 flex flex-col gap-4">
-                <div className="flex flex-col gap-4 p-4 lg:flex-row">
-                  <div className="flex w-full flex-col-reverse items-center justify-center gap-4 lg:w-1/2 lg:flex-row lg:items-start">
-                    <div className="flex flex-row gap-4 lg:flex-col">
+                <div className="flex flex-col gap-4 p-4 xl:flex-row">
+                  <div className="flex w-full flex-col-reverse items-center justify-center gap-4 xl:w-1/2 xl:flex-row xl:items-start">
+                    <div className="flex flex-row gap-4 xl:flex-col">
                       {[...Array(4)].map((_, index) => (
                         <div
                           key={index}
@@ -164,7 +164,7 @@ const ProductDetails = () => {
                         </div>
                       ))}
                     </div>
-                    <div className="flex h-[300px] w-[300px] items-center justify-center rounded-xl bg-[#19213D14] p-8 dark:bg-[#434750] lg:h-[400px] lg:w-[400px]">
+                    <div className="flex h-[300px] w-full max-w-[500px] items-center justify-center rounded-xl bg-[#19213D14] p-8 dark:bg-[#434750]">
                       <img
                         src="/images/iphone.png"
                         alt="Main Product Photo"
@@ -172,20 +172,19 @@ const ProductDetails = () => {
                       />
                     </div>
                   </div>
-
-                  <div className="w-full lg:w-1/2">
-                    <Text font={"bold"} size={"4xl"} className="text-start">
+                  <div className="w-full xl:w-1/2">
+                    <Text font={"bold"} size={"4xl"} className="text-start md:text-center xl:text-start">
                       Smartphone
                     </Text>
                     <Text
                       font={"semiBold"}
                       size={"2xl"}
                       color={"gray"}
-                      className="mt-2 text-start"
+                      className="mt-2 text-start md:text-center xl:text-start"
                     >
                       $49.00
                     </Text>
-                    <div className="flex items-center justify-center gap-2 text-xl md:justify-start">
+                    <div className="flex items-center justify-start gap-2 text-xl md:justify-center xl:justify-start">
                       <div className="flex gap-1 border-r-2 border-borderPrimary py-2 pr-1 text-yellow-500">
                         <FaStar />
                         <FaStar />
@@ -199,26 +198,22 @@ const ProductDetails = () => {
                     </div>
                     <Text
                       size={"xl"}
-                      className="text-md mt-4 max-w-[200px] text-center md:text-start lg:max-w-[300px] xl:max-w-[400px]"
+                      className="text-start md:text-center xl:text-start text-md mt-4 w-full xl:max-w-[400px]"
                     >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                       ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </Text>
-                    <Text
-                      size={"xl"}
-                      color={"gray"}
-                      className="my-4 text-center md:text-start"
-                    >
+                    <Text size={"xl"} color={"gray"} className="text-start md:text-center xl:text-start my-4">
                       Color
                     </Text>
-                    <div className="mb-8 flex items-center justify-center gap-4 md:justify-start">
+                    <div className="mb-8 flex items-center justify-start md:justify-center xl:justify-start gap-4">
                       <FaCircle className="text-2xl text-red-500" />
                       <FaCircle className="text-2xl text-green-500" />
                       <FaCircle className="text-2xl text-blue-500" />
                     </div>
-                    <div className="flex justify-center md:justify-start">
+                    <div className="flex justify-start md:justify-center xl:justify-start">
                       <Link
                         href="#"
                         className="rounded-xl border border-borderSecondary p-4 text-xl font-semibold"
@@ -226,25 +221,29 @@ const ProductDetails = () => {
                         Connect With Seller
                       </Link>
                     </div>
-                    <div className="mt-14 border-b border-borderPrimary"></div>
+                    <div className=" mt-14 border-b border-borderPrimary"></div>
                     <table className="mt-10 w-full table-auto">
                       <tbody>
                         <tr>
-                          <td className="px-4 py-2 text-gray-500">SKU</td>
-                          <td className="px-4 py-2 text-gray-500">:</td>
-                          <td className="px-4 py-2 text-gray-500">SS001</td>
+                          <td className="px-4 py-2 text-textSecondary">SKU</td>
+                          <td className="px-4 py-2 text-textSecondary">:</td>
+                          <td className="px-4 py-2 text-textSecondary">
+                            SS001
+                          </td>
                         </tr>
                         <tr>
-                          <td className="px-4 py-2 text-gray-500">Category</td>
-                          <td className="px-4 py-2 text-gray-500">:</td>
-                          <td className="px-4 py-2 text-gray-500">
+                          <td className="px-4 py-2 text-textSecondary">
+                            Category
+                          </td>
+                          <td className="px-4 py-2 text-textSecondary">:</td>
+                          <td className="px-4 py-2 text-textSecondary">
                             Smartphone
                           </td>
                         </tr>
                         <tr>
-                          <td className="px-4 py-2 text-gray-500">Tags</td>
-                          <td className="px-4 py-2 text-gray-500">:</td>
-                          <td className="px-4 py-2 text-gray-500">
+                          <td className="px-4 py-2 text-textSecondary">Tags</td>
+                          <td className="px-4 py-2 text-textSecondary">:</td>
+                          <td className="px-4 py-2 text-textSecondary">
                             Electronics, Mobile, Gadgets
                           </td>
                         </tr>
@@ -254,10 +253,25 @@ const ProductDetails = () => {
                 </div>
 
                 <div className="p-4">
-                  <Text color={"primary2"} font={"bold"} size={"4xl"}>
+                  <div className="hidden md:block">
+                  <Text
+                    color={"primary2"}
+                    font={"bold"}
+                    className="text-[25px] md:text-[35px] xl:text-[48px]"
+                  >
                     Details
                   </Text>
-                  <Text font={"semiBold"} className="mt-4">
+                  </div>
+                  <div className="block md:hidden">
+                  <Text
+                    font={"bold"}
+                    className="text-[25px] md:text-[35px] xl:text-[48px]"
+                  >
+                    Details
+                  </Text>
+                  </div>
+                  
+                  <Text font={"semiBold"} className="mt-4 text-sm lg:text-xl">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -277,14 +291,14 @@ const ProductDetails = () => {
                     occaecat cupidatat non proident, sunt in culpa qui officia
                     deserunt mollit anim id est laborum.
                   </Text>
-                  <ul className="mt-4 list-disc pl-5">
+                  <ul className="mt-4 list-disc pl-5 text-sm lg:text-xl">
                     <li>Lorem ipsum dolor sit amet</li>
                     <li>Lorem ipsum dolor sit amet</li>
                     <li>Lorem ipsum dolor sit amet</li>
                     <li>Lorem ipsum dolor sit amet</li>
                   </ul>
                 </div>
-                <div className="flex flex-col justify-center md:flex-row">
+                <div className="flex flex-col justify-center lg:flex-row">
                   <div className="w-full p-4">
                     <Text font={"bold"} size={"xl"} className="mb-4">
                       Reviews
@@ -295,7 +309,7 @@ const ProductDetails = () => {
                         <Text font={"bold"} size={"4xl"} className="pr-2">
                           4.2
                         </Text>
-                        <Text color={"gray"} size={"xl"}>
+                        <Text color={"gray"} className="text-sm lg:text-xl">
                           - 54 Reviews
                         </Text>
                       </div>
@@ -317,11 +331,11 @@ const ProductDetails = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="my-4 flex gap-4">
+                    <div className="border border-borderPrimary md:border-none rounded-xl p-4 my-4 flex gap-4">
                       <div className="my-4 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-bgThird text-primary2">
                         ED
                       </div>
-                      <div className="w-full p-4">
+                      <div className="w-full">
                         <div className="flex w-full items-start justify-between">
                           <Text font={"semiBold"}>Emily Davis</Text>
                           <div className="flex gap-1 py-2 pr-1 text-yellow-500">
@@ -341,11 +355,11 @@ const ProductDetails = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="my-4 flex gap-4">
+                    <div className="border border-borderPrimary md:border-none rounded-xl p-4 my-4 flex gap-4">
                       <div className="my-4 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-bgThird text-primary2">
                         ED
                       </div>
-                      <div className="w-full p-4">
+                      <div className="w-full">
                         <div className="flex w-full items-start justify-between">
                           <Text font={"semiBold"}>Emily Davis</Text>
                           <div className="flex gap-1 py-2 pr-1 text-yellow-500">
@@ -365,11 +379,11 @@ const ProductDetails = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="my-4 flex gap-4">
+                    <div className="border border-borderPrimary md:border-none rounded-xl p-4 my-4 flex gap-4">
                       <div className="my-4 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-bgThird text-primary2">
                         ED
                       </div>
-                      <div className="w-full p-4">
+                      <div className="w-full">
                         <div className="flex w-full items-start justify-between">
                           <Text font={"semiBold"}>Emily Davis</Text>
                           <div className="flex gap-1 py-2 pr-1 text-yellow-500">
@@ -390,7 +404,7 @@ const ProductDetails = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-full p-4">
+                  <div className="w-full">
                     <Text font={"bold"} size={"xl"}>
                       Add Review
                     </Text>
@@ -426,7 +440,7 @@ const ProductDetails = () => {
                   <div className="xl:1/2 flex w-full flex-col items-center p-4 md:w-2/3">
                     <Text
                       font={"bold"}
-                      className="text-[30px] md:text-[42px] xl:text-[48px]"
+                      className="text-[25px] md:text-[35px] xl:text-[48px]"
                     >
                       Top product
                     </Text>

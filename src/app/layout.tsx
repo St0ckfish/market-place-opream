@@ -86,7 +86,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <title>Opream</title>
+        <title>Person</title>
         <meta name="description" content="MarketPlace Person" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </head>
