@@ -133,7 +133,7 @@ const NavBarMobile = () => {
           <div
             dir={"ltr"}
             id="application-sidebar"
-            className={`hs-overlay hs-overlay-open:translate-x-0 fixed inset-x-0 bottom-0 z-[60] h-[90px] transform overflow-y-auto border-t border-borderPrimary bg-bgPrimary drop-shadow-md shadow-[0_-4px_6px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in [--auto-close:lg] lg:bottom-0 lg:end-auto lg:block lg:translate-x-0 lg:drop-shadow-none`}
+            className={`hs-overlay hs-overlay-open:translate-x-0 fixed inset-x-0 bottom-0 z-[60] h-[90px] transform overflow-y-auto border-t border-borderPrimary bg-bgPrimary dark:bg-bgSecondary drop-shadow-md shadow-[0_-4px_6px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in [--auto-close:lg] lg:bottom-0 lg:end-auto lg:block lg:translate-x-0 lg:drop-shadow-none`}
             >
             <nav
               className={`hs-accordion-group flex w-full`}

@@ -8,8 +8,6 @@ html {
   max-zoom: 1.1;
 }
 
-
-
 @supports not (zoom: 1) {
   html {
     -ms-zoom: 1;
