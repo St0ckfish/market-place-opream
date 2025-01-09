@@ -34,6 +34,7 @@ html {
   --bg-primary: 255, 255, 255; /* #ffffff */
   --bg-secondary: 245, 246, 250; /* #f5f6fa */
   --bg-third: 245, 250, 255; /* ##F5FAFF */
+  --bg-fourth: #DFEBFF; /* #DFEBFF */
   --comment: 241, 245, 249; /* #F1F5F9 */ 
   --bg-gray: 224, 224, 224; /* #e0e0e0 */
   --text-primary: 20, 27, 52; /* #141b34 */
@@ -62,8 +63,10 @@ html {
   --primary-hover: 33, 102, 148; /* #2d85c0 */
   --primary2-hover: 13, 67, 175; /* #0d43af */
   --navLinks: 84, 101, 111; /* #54656F */
+  --bg-primary: 0, 0, 0; /* #000000 */
   --bg-secondary: 23, 28, 35; /* #171c23 */
   --bg-third: 7, 31, 58; /* #071f3a */
+  --bg-fourth: #0d43af6c; /* #0d43af1e */
   --bg-gray: 224, 224, 224; /* #e0e0e0 */
   --text-primary: 253, 253, 255; /* #fdfdff */
   --text-muted: 108, 108, 108; /* #6c6c6c */
