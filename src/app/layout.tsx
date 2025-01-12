@@ -91,7 +91,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0, user-scalable=yes" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </head>
-      <body className="bg-bgSecondary">
+      <body className="bg-bgPrimary md:bg-bgSecondary">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <div className="hidden md:block">
             <NavBar />

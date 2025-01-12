@@ -171,4 +171,14 @@ html {
   ::-webkit-scrollbar-thumb:hover {
     background: #0d43af;
   }
+  
+  @media (max-width: 768px) {
+    ::-webkit-scrollbar-thumb {
+      background: #3498DB;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2d85c0;
+    }
+  }
 }
