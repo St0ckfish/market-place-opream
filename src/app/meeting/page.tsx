@@ -48,10 +48,33 @@ function Meeting() {
   ];
   const [selectedOption, setSelectedOption] = useState("Groups");
   const [activeTab, setActiveTab] = useState("meeting");
-  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+  const [screenHeight, setScreenHeight] = useState(0); // Initialize with 0 or a default value
 
-  console.log("👾 ~ Meeting ~ activeTab:", activeTab);
-  console.log("👾 ~ Meeting ~ screenHeight:", screenHeight);
+  useEffect(() => {
+    // Check if `window` is available to avoid SSR issues
+    if (typeof window !== "undefined") {
+      // Set the initial screen height
+      setScreenHeight(window.innerHeight);
+
+      // Define the resize handler
+      const handleResize = () => {
+        if (window.innerWidth >= 768) {
+          console.log("Screen is larger than md (768px)");
+          executeYourFunction();
+        }
+        // Update screen height whenever the window is resized
+        setScreenHeight(window.innerHeight);
+      };
+
+      // Attach the event listener
+      window.addEventListener("resize", handleResize);
+
+      // Cleanup on component unmount
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []); // Empty dependency array ensures this runs only once
 
   const handleOptionChange = (value: any) => {
     setSelectedOption(value);
@@ -61,28 +84,12 @@ function Meeting() {
     setActiveTab(value);
   };
 
-  const handleResize = () => {
-    if (window.innerWidth >= 768) {
-      console.log("Screen is larger than md (768px)");
-      executeYourFunction();
-    }
-    // Update screen height whenever the window is resized
-    setScreenHeight(window.innerHeight);
-  };
-
   const executeYourFunction = () => {
     setActiveTab("meeting");
   };
 
-  useEffect(() => {
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []); // Removed `handleResize` from dependencies as it's a direct function
+  console.log("👾 ~ Meeting ~ activeTab:", activeTab);
+  console.log("👾 ~ Meeting ~ screenHeight:", screenHeight);
 
   return (
     <>
