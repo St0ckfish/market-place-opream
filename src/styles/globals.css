@@ -32,7 +32,7 @@ html {
   --primary2-hover: 13, 67, 175; /* #0d43af */
   --navLinks: 84, 101, 111; /* #54656F */
   --bg-primary: 255, 255, 255; /* #ffffff */
-  --bg-secondary: 245, 246, 250; /* #f5f6fa */
+  --bg-secondary: 240, 240, 240; /* #F0F0F0 */
   --bg-third: 245, 250, 255; /* ##F5FAFF */
   --bg-fourth: #DFEBFF; /* #DFEBFF */
   --bg-input: 243, 244, 246;  /* #F3F4F6 */
@@ -84,6 +84,7 @@ html {
   --border-primary: 42, 45, 50; /* #2a2d32 */
   --border-secondary: 52, 56, 61; /* #34383d */
   --thead: 7, 31, 58; /* #071f3a */
+  --light-gray:  26, 26, 26; /* #1A1A1A */
   --black-or-white: 255, 255, 255; /* #ffffff */
   --notification: 15, 15, 15; /* #0f0f0f */
   --chat: 223, 189, 144; /* #dfbd90 */
