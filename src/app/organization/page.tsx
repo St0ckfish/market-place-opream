@@ -7,7 +7,9 @@ function Organization() {
   return (
     <>
       <Container>
-        <Text font={'bold'} size={'2xl'}>Organization</Text>
+        <Text font={"bold"} size={"2xl"}>
+          Organization
+        </Text>
         <Box className="h-[80vh]"></Box>
       </Container>
     </>
