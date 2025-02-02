@@ -7,9 +7,7 @@ function Education() {
   return (
     <>
       <Container>
-        <Text font={"bold"} size={"2xl"}>
-          Education
-        </Text>
+        <Text font={'bold'} size={'2xl'}>Education</Text>
         <Box className="h-[80vh]"></Box>
       </Container>
     </>
