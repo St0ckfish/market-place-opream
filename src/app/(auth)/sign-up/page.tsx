@@ -65,8 +65,8 @@ function Signup() {
                   {t.fullName}
                 </label>
                 <div className="mt-1 flex gap-4">
-                  <Input theme="gray" border="none" placeholder={t.firstName} />
-                  <Input theme="gray" border="none" placeholder={t.lastName} />
+                  <Input className="bg-bgInput" border="none" placeholder={t.firstName} />
+                  <Input className="bg-bgInput" border="none" placeholder={t.lastName} />
                 </div>
               </div>
               <div className="flex flex-col">
@@ -98,7 +98,7 @@ function Signup() {
                 </select>
               </div>
               <Input
-                theme="gray"
+                className="bg-bgInput"
                 border="none"
                 type="email"
                 label={t.email}
@@ -106,14 +106,14 @@ function Signup() {
               />
               <Input
                 label={t.password}
-                theme="gray"
+                className="bg-bgInput"
                 border="none"
                 placeholder={t.passwordPlaceholder}
                 type="password"
               />
               <Input
                 label={t.phone}
-                theme="gray"
+                className="bg-bgInput"
                 border="none"
                 placeholder={t.phonePlaceholder}
                 type="number"
@@ -134,7 +134,7 @@ function Signup() {
               </div>
               <Input
                 label={t.nationality}
-                theme="gray"
+                className="bg-bgInput"
                 border="none"
                 placeholder={t.nationalityPlaceholder}
               />
