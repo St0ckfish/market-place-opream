@@ -1,12 +1,19 @@
-import axios, { InternalAxiosRequestConfig } from "axios";
-import https from "https";
+import axios from "axios";
+import Cookies from "js-cookie"; 
 
 const axiosInstance = axios.create({
-  baseURL: "https://apiopream.uralcen.com/api/v1",
+  baseURL: "https://api-onway.opream.net/api/v1",
   headers: {
     "Content-Type": "application/json",
   },
-  httpsAgent: typeof window === "undefined" ? new https.Agent({ rejectUnauthorized: false }) : undefined,
+});
+
+axiosInstance.interceptors.request.use((config) => {
+  const token = Cookies.get("accessToken"); 
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
 });
 
 export default axiosInstance;
