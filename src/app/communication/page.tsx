@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
 import React, { useState } from "react";
-import { Search, Phone, Users, Plus, Mic, Smile, Check, Paperclip } from "lucide-react";
+import { Search, Mic, Smile, Paperclip } from "lucide-react";
 import Container from "~/_components/Container";
 import { IoIosVideocam } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
