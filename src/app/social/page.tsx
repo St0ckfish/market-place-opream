@@ -1,7 +1,7 @@
 "use client"
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
-import { Users, Star, MessageSquare, Share2, Plus } from "lucide-react";
+import { Star, MessageSquare, Share2, Plus } from "lucide-react";
 import Container from "~/_components/Container";
 import { IoIosVideocam, IoMdSearch } from "react-icons/io";
 import { MdPhotoLibrary } from "react-icons/md";
