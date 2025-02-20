@@ -7,6 +7,7 @@ import { IoIosVideocam, IoMdSearch } from "react-icons/io";
 import { MdPhotoLibrary } from "react-icons/md";
 import { FaSmileBeam } from "react-icons/fa";
 import { FaEarthAmericas } from "react-icons/fa6";
+import { Text } from "~/_components/Text";
 
 const ProfileCard = () => (
   <div className="bg-bgPrimary rounded-3xl p-4 lg:p-6 shadow-xl mb-4 lg:mb-8">
@@ -25,23 +26,23 @@ const ProfileCard = () => (
       </div>
     </div>
     <div className="mt-8">
-      <h2 className="text-lg lg:text-xl font-bold">Ramy Muhamed</h2>
-      <p className="text-gray-500 text-xs lg:text-sm">@ramymuha...</p>
+      <Text font="bold" className="text-lg lg:text-xl">Ramy Muhamed</Text>
+      <Text font={"medium"} color={"gray"} className="text-xs lg:text-sm">@ramymuha...</Text>
       <div className="flex justify-between mt-4">
         <div className="text-center">
-          <p className="font-bold text-sm lg:text-base">250</p>
-          <p className="text-gray-500 text-xs lg:text-sm">Post</p>
+          <Text font={"bold"} className="text-sm lg:text-base">250</Text>
+          <Text color={"gray"} className="text-xs lg:text-sm">Post</Text>
         </div>
         <div className="text-center">
-          <p className="font-bold text-sm lg:text-base">2022</p>
-          <p className="text-gray-500 text-xs lg:text-sm">Followers</p>
+          <Text font={"bold"} className="text-sm lg:text-base">2022</Text>
+          <Text color={"gray"}  className="text-gray-500 text-xs lg:text-sm">Followers</Text>
         </div>
         <div className="text-center">
-          <p className="font-bold text-sm lg:text-base">590</p>
-          <p className="text-gray-500 text-xs lg:text-sm">Following</p>
+          <Text font={"bold"} className="text-sm lg:text-base">590</Text>
+          <Text color={"gray"} className="text-xs lg:text-sm">Following</Text>
         </div>
       </div>
-      <button className="w-full bg-blue-500 text-white font-medium rounded-lg py-2 mt-4 text-sm lg:text-base">
+      <button className="w-full bg-primary2 text-white font-medium rounded-lg py-2 mt-4 text-sm lg:text-base">
         My Profile
       </button>
     </div>
@@ -89,7 +90,7 @@ const StoriesSection = () => {
                   <p className="text-[10px] lg:text-xs text-center text-white">Create story</p>
                 </div>
                 <div className="absolute top-0 left-0 right-0 flex justify-center">
-                  <button className="bg-blue-500 rounded-full p-1 lg:p-2 mt-[100px] lg:mt-[150px]">
+                  <button className="bg-primary2 rounded-full p-1 lg:p-2 mt-[100px] lg:mt-[150px]">
                     <Plus className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
                   </button>
                 </div>
@@ -101,7 +102,7 @@ const StoriesSection = () => {
                   <img
                     src={story.profilePic}
                     alt={`${story.name}'s profile`}
-                    className="w-6 h-6 lg:w-8 lg:h-8 rounded-full border-2 border-blue-500"
+                    className="w-6 h-6 lg:w-8 lg:h-8 rounded-full border-2 border-primary2"
                   />
                 </div>
                 <p className="absolute bottom-2 left-2 right-2 text-[10px] lg:text-xs text-white font-medium">
@@ -170,7 +171,7 @@ const Post = () => (
     />
     <div className="flex justify-between items-center">
       <div className="flex items-center gap-1 lg:gap-2 text-xs lg:text-sm font-semibold">
-        <Star className="text-blue-500 w-4 h-4 lg:w-5 lg:h-5" />
+        <Star className="text-primary2 w-4 h-4 lg:w-5 lg:h-5" />
         <span>You & 1 other</span>
       </div>
       <div className="text-gray-600 text-xs lg:text-sm font-semibold">0 Comments</div>
@@ -195,18 +196,18 @@ const Post = () => (
 const Contacts = () => (
   <div className="bg-bgPrimary rounded-3xl p-3 lg:p-4 shadow-2xl">
     <div className="flex justify-between items-center mb-3 lg:mb-4">
-      <h2 className="font-bold text-lg lg:text-xl">Events</h2>
+      <Text className="font-bold text-lg lg:text-xl">Events</Text>
     </div>
     <div className="flex justify-between items-center mb-3 lg:mb-4">
-      <h2 className="font-bold text-lg lg:text-xl">Contacts</h2>
+      <Text className="font-bold text-lg lg:text-xl">Contacts</Text>
       <div className="flex gap-2">
-        <button className="p-1.5 lg:p-2 hover:bg-gray-100 rounded-full">
+        <button className="p-1.5 lg:p-2 hover:bg-bgSecondary rounded-full">
           <IoMdSearch className="w-4 h-4 lg:w-5 lg:h-5" />
         </button>
       </div>
     </div>
     {['Clara Cross', 'Stephany Dejesus', 'Rhea Chan', 'Aidan Mason', 'Herbert Frank', 'Imran Dennis'].map(name => (
-      <div key={name} className="flex items-center gap-2 lg:gap-3 py-1.5 lg:py-2 hover:bg-gray-100 rounded-lg px-2 cursor-pointer">
+      <div key={name} className="flex items-center gap-2 lg:gap-3 py-1.5 lg:py-2 hover:bg-bgSecondary rounded-lg px-2 cursor-pointer">
         <img 
           src="/images/saving.png"
           alt={name}
@@ -223,13 +224,13 @@ const Saving = () => (
     <div className="flex justify-between items-center mb-3 lg:mb-4">
       <h2 className="font-bold text-lg lg:text-xl">Your Saving</h2>
       <div className="flex gap-2">
-        <button className="p-1.5 lg:p-2 hover:bg-gray-100 text-xs lg:text-sm font-semibold text-gray-500 rounded-full">
+        <button className="p-1.5 lg:p-2 hover:bg-bgSecondary text-xs lg:text-sm font-semibold text-gray-500 rounded-full">
           See All
         </button>
       </div>
     </div>
     {['Art And Drawing', 'Courses', 'Favorite Posts', 'Development', 'Each'].map(name => (
-      <div key={name} className="flex items-center gap-2 lg:gap-3 py-1.5 lg:py-2 hover:bg-gray-100 rounded-lg px-2 cursor-pointer">
+      <div key={name} className="flex items-center gap-2 lg:gap-3 py-1.5 lg:py-2 hover:bg-bgSecondary rounded-lg px-2 cursor-pointer">
         <img 
           src="/images/saving.png"
           alt={name}
@@ -249,7 +250,7 @@ function Social() {
       <div className="container mx-auto py-3 lg:py-6 px-2 lg:px-4">
         {/* Mobile Menu Toggle */}
         <button 
-          className="lg:hidden mb-4 p-2 bg-blue-500 text-white rounded-lg"
+          className="lg:hidden mb-4 p-2 bg-primary2 text-white rounded-lg"
           onClick={() => setShowSidebars(!showSidebars)}
         >
           Toggle Sidebars
