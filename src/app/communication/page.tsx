@@ -7,8 +7,14 @@ import { IoIosVideocam } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { FiPlus } from "react-icons/fi";
+import { useLanguageStore } from "~/APIs/store";
+import translations from "./translations";
+import { Text } from "~/_components/Text";
 
 const ChatInterface = () => {
+  const language = useLanguageStore((state) => state.language);
+  const t = translations[language] || translations.en;
+
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   
   const sidebarChats = [
@@ -32,23 +38,23 @@ const ChatInterface = () => {
       <div className="w-80 border-r bg-bgPrimary">
         <div className="p-4">
           <div className="flex items-center w-full justify-between py-4">
-            <h1 className="text-xl font-bold mb-2">Chats</h1>
+            <h1 className="text-xl font-bold mb-2">{t.chats}</h1>
             <button className="p-1 rounded-full bg-primary2"><FiPlus color="white" size={25} /></button>
           </div>
           
           {/* Tabs */}
           <div className="flex space-x-4 mb-4 font-semibold text-sm">
-            <button className="text-blue-600">ALL</button>
-            <button className="text-gray-500">Unread</button>
-            <button className="text-gray-500">Read</button>
-            <button className="text-gray-500">Favorite</button>
+            <button className="text-primary2 ml-4">{t.all}</button>
+            <button className="text-textSecondary">{t.unread}</button>
+            <button className="text-textSecondary">{t.read}</button>
+            <button className="text-textSecondary">{t.favorite}</button>
           </div>
 
           {/* Search */}
           <div className="relative mb-4">
             <input
               type="text"
-              placeholder="Search or start a new chat"
+              placeholder={t.searchPlaceholder}
               className="w-full p-2 pl-8 rounded-lg outline-none text-sm"
             />
             <Search className="absolute left-2 top-2.5 h-4 w-4 text-gray-400" />
@@ -61,7 +67,7 @@ const ChatInterface = () => {
                 <div className="w-10 h-10  rounded-full mr-3">
                   <img src="/images/chatProf.png" className="rounded-full w-10 h-10" alt="#" />
                 </div>
-                <div className="flex-1">
+                <div className="mr-2 flex-1">
                   <div className="flex justify-between">
                     <span className="font-medium">{chat.name}</span>
                     <span className="text-xs text-gray-500">{chat.time}</span>
@@ -83,12 +89,12 @@ const ChatInterface = () => {
                   <img src="/images/chatProf.png" className="rounded-full w-10 h-10" alt="#" />
                 </div>
             <div>
-              <h2 className="font-medium">Joe</h2>
-              <span className="text-sm text-blue-600 font-medium">• online</span>
+              <Text font="medium" className="mr-4">Joe</Text>
+              <span className="text-sm mr-4 text-primary2 font-medium">• {t.online}</span>
             </div>
           </div>
           <div className="flex space-x-4 items-center text-gray-600">
-            <FaPhone size={16} className="lg:w-5 lg:h-5" />
+            <FaPhone size={16} className="ml-4 lg:w-5 lg:h-5" />
             <IoIosVideocam size={20} className="lg:w-7 lg:h-6" />
             <div className="w-[1px] h-7 bg-[#979FA7]"/>
             <Search size={20} className="lg:w-7 lg:h-6" />
@@ -109,7 +115,7 @@ const ChatInterface = () => {
             </div>
           </div>
           
-          <div className="flex justify-end max-w-md ml-auto">
+          <div className={`flex justify-end max-w-md ${language === 'ar' ? 'mr-auto' : 'ml-auto'} `}>
             <div className="bg-primary text-black font-medium p-3 rounded-lg relative">
               <p>Hey Regis, absolutely</p>
               <div className="flex items-center justify-end mt-1 space-x-1">
@@ -135,7 +141,7 @@ const ChatInterface = () => {
             
             <input
               type="text"
-              placeholder="Type a message"
+              placeholder={t.typeMessage}
               className="flex-1 p-2 rounded-lg  outline-none"
             />
             
